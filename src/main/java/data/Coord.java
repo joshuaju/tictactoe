@@ -2,13 +2,20 @@ package data;
 
 public class Coord {
 
-    private final String name;
+    private final int row;
+    private final int col;
 
-    public Coord(String name) {
-        this.name = name;
+    public Coord(int row, int col) {
+        this.row = row;
+        this.col = col;
     }
 
-    public String getName() {
-        return name;
+    public int getRow() {
+        return row;
     }
+
+    public int getCol() {
+        return col;
+    }
+
 }

@@ -12,16 +12,16 @@ public class Command {
         return text;
     }
 
-    public boolean isEnd(){
-        return false;
+    public boolean isEnd() {
+        return "ende".equalsIgnoreCase(text);
     }
 
-    public boolean isNew(){
-        return false;
+    public boolean isNew() {
+        return "neu".equalsIgnoreCase(text);
     }
 
-    public boolean isTurn(){
-        return false;
+    public boolean isTurn() {
+        return !isEnd() && !isNew();
     }
 
 }

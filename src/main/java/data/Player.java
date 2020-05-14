@@ -1,14 +1,20 @@
 package data;
 
-public class Player {
+public enum Player {
 
-    private final String name;
+    P1,
+    P2;
 
-    public Player(String name) {
-        this.name = name;
+    public Player next() {
+        switch (this) {
+            case P1 -> {
+                return P2;
+            }
+            case P2 -> {
+                return P1;
+            }
+            default -> throw new IllegalArgumentException();
+        }
     }
 
-    public String getName() {
-        return name;
-    }
 }
